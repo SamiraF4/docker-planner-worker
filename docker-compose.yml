@@ -14,3 +14,16 @@ services:
       - "8082:3000"
     env_file:
       - .env
+
+  worker2 : 
+    environment: 
+      - PORT=3001
+  #   - MULT=true
+    build : ./worker
+    image : worker2
+    ports: 
+      - "3001:3001"
+    container_name: worker2
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
