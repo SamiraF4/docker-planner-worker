@@ -1,5 +1,5 @@
-FROM node:12
-WORKDIR /Users/samirafawaz/Documents/docker-planner-worker/docker-planner-worker/planner/
+FROM node:14
+WORKDIR /app
 COPY package*.json main.js ./
 RUN npm install
 EXPOSE 8080
