@@ -14,6 +14,9 @@ services:
       - "8082:3000"
     env_file:
       - .env
+    depends_on:
+      - worker
+      - worker2
 
   worker2 : 
     environment: 
@@ -26,4 +29,3 @@ services:
     container_name: worker2
     extra_hosts:
       - host.docker.internal:host-gateway
-
