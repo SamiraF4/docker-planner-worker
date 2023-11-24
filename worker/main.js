@@ -12,7 +12,7 @@ const MULT =
   process.env.MULT !== undefined ? JSON.parse(process.env.MULT) : true
 const ADD = process.env.ADD !== undefined ? JSON.parse(process.env.ADD) : true
 const app = express()
-const port = process.env.PORT || 3000 || 3001
+const port = process.env.PORT || 3000 || 3001 || 3003 || 3004
 const ADDRESS =
   process.env.ADDRESS !== undefined
     ? process.env.ADDRESS
