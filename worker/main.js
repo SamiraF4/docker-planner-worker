@@ -12,7 +12,7 @@ const MULT =
   process.env.MULT !== undefined ? JSON.parse(process.env.MULT) : true
 const ADD = process.env.ADD !== undefined ? JSON.parse(process.env.ADD) : true
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000 || 3001
 const ADDRESS =
   process.env.ADDRESS !== undefined
     ? process.env.ADDRESS
@@ -87,5 +87,5 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   // register()
-  console.log(`Worker ${id} listening at http://localhost:${port}`)
+  console.log(`Worker ${id} listening at http://172.16.8.18:${port}`)
 })

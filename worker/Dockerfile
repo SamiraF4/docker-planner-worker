@@ -2,6 +2,8 @@ FROM node:14
 WORKDIR /app
 COPY package*.json main.js ./
 RUN npm install
+EXPOSE 3000
+EXPOSE 3001
 EXPOSE $PORT
 ENV PORT=3000
 ENV TASKS=4
